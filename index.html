@@ -2,10 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>ResumeIQ Pro | AI-Powered Resume Intelligence</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Favicon and Website Thumbnails -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23fbbf24;stop-opacity:1' /><stop offset='100%' style='stop-color:%23d97706;stop-opacity:1' /></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23grad)'/><text x='50' y='65' font-family='Font Awesome 6 Free' font-size='45' font-weight='900' text-anchor='middle' fill='white'>🧠</text></svg>">
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23fbbf24;stop-opacity:1' /><stop offset='100%' style='stop-color:%23d97706;stop-opacity:1' /></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23grad)'/><text x='50' y='65' font-family='Font Awesome 6 Free' font-size='45' font-weight='900' text-anchor='middle' fill='white'>🧠</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23fbbf24;stop-opacity:1' /><stop offset='100%' style='stop-color:%23d97706;stop-opacity:1' /></linearGradient></defs><rect width='100' height='100' rx='20' fill='url(%23grad)'/><text x='50' y='65' font-family='Font Awesome 6 Free' font-size='45' font-weight='900' text-anchor='middle' fill='white'>🧠</text></svg>">
+    
+    <!-- Open Graph / Social Media Thumbnails -->
+    <meta property="og:title" content="ResumeIQ Pro - AI-Powered Resume Intelligence">
+    <meta property="og:description" content="Advanced AI-powered resume analysis with ATS scoring, skills gap analysis, and comprehensive HR insights for smarter hiring decisions.">
+    <meta property="og:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23111827;stop-opacity:1' /><stop offset='100%' style='stop-color:%231f2937;stop-opacity:1' /></linearGradient></defs><rect width='1200' height='630' fill='url(%23grad)'/><circle cx='300' cy='315' r='80' fill='%23fbbf24'/><text x='300' y='340' font-family='Font Awesome 6 Free' font-size='60' font-weight='900' text-anchor='middle' fill='white'>🧠</text><text x='500' y='280' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white'>ResumeIQ Pro</text><text x='500' y='330' font-family='Arial,sans-serif' font-size='28' fill='%239ca3af'>AI-Powered Resume Intelligence</text><text x='500' y='380' font-family='Arial,sans-serif' font-size='22' fill='%236b7280'>Smart ATS Analysis • Skills Gap Insights • HR Analytics</text></svg>">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ResumeIQ Pro - AI-Powered Resume Intelligence">
+    <meta name="twitter:description" content="Advanced AI resume analysis with ATS scoring and skills gap analysis.">
+    <meta name="twitter:image" content="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 630'><defs><linearGradient id='grad' x1='0%' y1='0%' x2='100%' y2='100%'><stop offset='0%' style='stop-color:%23111827;stop-opacity:1' /><stop offset='100%' style='stop-color:%231f2937;stop-opacity:1' /></linearGradient></defs><rect width='1200' height='630' fill='url(%23grad)'/><circle cx='300' cy='315' r='80' fill='%23fbbf24'/><text x='300' y='340' font-family='Font Awesome 6 Free' font-size='60' font-weight='900' text-anchor='middle' fill='white'>🧠</text><text x='500' y='280' font-family='Arial,sans-serif' font-size='48' font-weight='bold' fill='white'>ResumeIQ Pro</text><text x='500' y='330' font-family='Arial,sans-serif' font-size='28' fill='%239ca3af'>AI-Powered Resume Intelligence</text><text x='500' y='380' font-family='Arial,sans-serif' font-size='22' fill='%236b7280'>Smart ATS Analysis • Skills Gap Insights • HR Analytics</text></svg>">
+    
+    <!-- Additional Meta Tags for SEO and Branding -->
+    <meta name="description" content="ResumeIQ Pro - Advanced AI-powered resume analysis platform with ATS compatibility scoring, skills gap analysis, compliance checking, and comprehensive HR analytics for smarter hiring decisions.">
+    <meta name="keywords" content="resume analysis, ATS score, AI resume, skills gap, HR analytics, talent acquisition, resume optimization, hiring intelligence">
+    <meta name="author" content="ResumeIQ Pro">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#fbbf24">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js" 
+            onerror="console.error('Failed to load PDF.js from CDN'); window.pdfJSLoadError = true;"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" 
+            onerror="console.error('Failed to load Chart.js from CDN');"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -1046,7 +1073,49 @@
             box-shadow: var(--shadow-md);
         }
 
+        /* Mobile Menu Toggle */
+        .mobile-menu-toggle {
+            display: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 1001;
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mobile-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
         /* Responsive Design */
+        @media (max-width: 1400px) {
+            .hr-analytics-sidebar {
+                width: 320px;
+                min-width: 320px;
+                max-width: 320px;
+                padding: 15px;
+            }
+            
+            .main-content {
+                margin-right: 320px;
+            }
+        }
+
         @media (max-width: 1200px) {
             .dashboard {
                 grid-template-columns: 1fr;
@@ -1054,63 +1123,286 @@
             
             .sidebar {
                 width: 240px;
+                min-width: 240px;
+                max-width: 240px;
+            }
+            
+            .main-content {
+                margin-left: 240px;
+                margin-right: 280px;
             }
             
             .hr-analytics-sidebar {
-                width: 340px;
+                width: 280px;
+                min-width: 280px;
+                max-width: 280px;
             }
         }
 
         @media (max-width: 992px) {
             .main-content {
+                margin-left: 0;
+                margin-right: 0;
                 flex-direction: column;
             }
             
             .hr-analytics-sidebar {
+                position: relative;
                 width: 100%;
+                max-width: none;
+                height: auto;
                 border-left: none;
                 border-top: 1px solid rgba(255, 255, 255, 0.1);
+                order: 2;
+            }
+            
+            .dashboard-container {
+                order: 1;
+                margin-left: 0;
             }
             
             .skill-details {
                 grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .analytics-dashboard {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             }
         }
 
         @media (max-width: 768px) {
+            body {
+                overflow-x: hidden;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
             .app-container {
                 flex-direction: column;
+                position: relative;
             }
             
             .sidebar {
-                width: 100%;
-                padding: 20px;
+                position: fixed;
+                top: 0;
+                left: -100%;
+                width: 280px;
+                min-width: 280px;
+                max-width: 280px;
+                height: 100vh;
+                z-index: 1000;
+                transition: left 0.3s ease;
+                padding: 80px 20px 20px;
+            }
+            
+            .sidebar.mobile-open {
+                left: 0;
+            }
+            
+            .main-content {
+                margin-left: 0;
+                margin-right: 0;
+                padding-top: 80px;
             }
             
             .dashboard-container {
-                padding: 20px;
+                padding: 15px;
+            }
+            
+            .hr-analytics-sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 15px;
+                margin: 0;
             }
             
             .header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 15px;
+                text-align: left;
+            }
+            
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            
+            .header-actions {
+                width: 100%;
+                justify-content: stretch;
+            }
+            
+            .header-actions .btn {
+                flex: 1;
+                justify-content: center;
             }
             
             .metric-grid {
                 grid-template-columns: 1fr;
+                gap: 15px;
             }
             
             .settings-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .analytics-tabs {
+                flex-direction: column;
+                gap: 5px;
+            }
+            
+            .analytics-tab {
+                flex: none;
+                padding: 12px;
+                font-size: 0.8rem;
+            }
+            
+            .hr-analytics-sidebar .analytics-tab {
+                flex-direction: row;
+                text-align: left;
+                height: auto;
+                min-height: auto;
+            }
+            
+            .hr-analytics-sidebar .analytics-tab i {
+                margin-right: 8px;
+                margin-bottom: 0;
+            }
+            
+            .card-title {
+                font-size: 1rem;
+            }
+            
+            .upload-area {
+                padding: 30px 20px;
+            }
+            
+            .upload-icon {
+                font-size: 2rem;
+            }
+            
+            textarea {
+                height: 150px;
+            }
+            
+            .progress-ring {
+                width: 120px;
+                height: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .mobile-menu-toggle {
+                top: 15px;
+                left: 15px;
+                width: 45px;
+                height: 45px;
+            }
+            
+            .main-content {
+                padding-top: 70px;
+            }
+            
+            .dashboard-container {
+                padding: 10px;
+            }
+            
+            .hr-analytics-sidebar {
+                padding: 10px;
+            }
+            
+            .card-header {
+                padding: 10px 15px 0;
+            }
+            
+            .card-body {
+                padding: 0 15px 15px;
+            }
+            
+            .header h1 {
+                font-size: 1.3rem;
+            }
+            
+            .header-actions {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .btn {
+                padding: 10px 15px;
+                font-size: 0.85rem;
+            }
+            
+            .analytics-dashboard {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .upload-area {
+                padding: 20px 15px;
+            }
+            
+            .upload-area h3 {
+                font-size: 1rem;
+            }
+            
+            .sidebar {
+                width: 260px;
+                min-width: 260px;
+                max-width: 260px;
+            }
+            
+            .logo-text {
+                font-size: 1.2rem;
+            }
+            
+            .nav-item {
+                padding: 12px 20px;
+            }
+            
+            .progress-ring {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        /* Touch-friendly improvements */
+        @media (max-width: 768px) {
+            .btn, .nav-item, .analytics-tab {
+                min-height: 44px;
+            }
+            
+            select, input, textarea {
+                font-size: 16px; /* Prevents zoom on iOS */
+            }
+            
+            .card {
+                margin-bottom: 15px;
+            }
+            
+            .insight-card {
+                padding: 15px;
+                margin-bottom: 10px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+        <i class="fas fa-bars"></i>
+    </button>
+    
+    <!-- Mobile Overlay -->
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    
     <div class="app-container">
         <!-- Sidebar Navigation -->
-        <div class="sidebar">
+        <div class="sidebar" id="sidebar">
             <div class="logo">
                 <div class="logo-icon">
                     <i class="fas fa-brain"></i>
